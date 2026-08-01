@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stark Fabricator | J.A.R.V.I.S. HUD</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="voice-ui">
+        <div id="mic-btn" class="jarvis-ring-container">
+            <div class="ring outer-ring-1"></div>
+            <div class="ring outer-ring-2"></div>
+            <div class="ring tech-ticks"></div>
+            <div class="ring inner-ring"></div>
+            <div class="jarvis-core">
+                <span class="jarvis-text">J.A.R.V.I.S.</span>
+            </div>
+        </div>
+        
+        <div id="status-badge" class="status-badge">
+            <span class="dot">●</span> <span id="status-text">ACTIVE</span>
+        </div>
+        <div class="sub-status">CLICK OR SAY "HEY JARVIS SHOW ME SPIDERMAN"</div>
+    </div>
+
+    <div id="fabricator-ui" class="hidden">
+        
+        <div class="holo-stage">
+            
+            <div class="holo-projection">
+                <img id="suit-image" src="https://cdn-icons-png.flaticon.com/512/1090/1090806.png" alt="Spider-Man Suit" class="holo-filter">
+            </div>
+
+            <div class="pedestal-container">
+                <div class="pedestal-ring ring-3"></div>
+                <div class="pedestal-ring ring-2"></div>
+                <div class="pedestal-ring ring-1"></div>
+                <div class="pedestal-glow"></div>
+            </div>
+
+            <div class="suit-title-card">
+                <h1 id="suit-name">HOMEMADE SUIT</h1>
+                <div class="hud-line"></div>
+            </div>
+
+            <div class="controls">
+                <button class="nav-btn" onclick="prevSuit()">&#9664; PREV</button>
+                <button class="fabricate-btn" onclick="fabricateSuit()">FABRICATE</button>
+                <button class="nav-btn" onclick="nextSuit()">NEXT &#9654;</button>
+            </div>
+        </div>
+
+        <div class="info-panel">
+            <div class="panel-header">SUIT SPECIFICATIONS</div>
+            
+            <div class="stat-group">
+                <div class="stat-label"><span>ARMOR</span> <span id="stat-armor-val">0%</span></div>
+                <div class="stat-bar-bg"><div id="stat-armor" class="stat-bar-fill"></div></div>
+            </div>
+            
+            <div class="stat-group">
+                <div class="stat-label"><span>TECH INTEGRATION</span> <span id="stat-tech-val">0%</span></div>
+                <div class="stat-bar-bg"><div id="stat-tech" class="stat-bar-fill"></div></div>
+            </div>
+            
+            <div class="stat-group">
+                <div class="stat-label"><span>AGILITY INDEX</span> <span id="stat-agility-val">0%</span></div>
+                <div class="stat-bar-bg"><div id="stat-agility" class="stat-bar-fill"></div></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
